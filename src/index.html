@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+    <title> <%= htmlWebpackPlugin.options.title %> </title>
+</head>
+<body class="body">
+    <div id="app"></div>
+    <% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
+        <script type="text/javascript" src="<%=js%>"></script>
+    <% } %>
+</body>
+
+</html>

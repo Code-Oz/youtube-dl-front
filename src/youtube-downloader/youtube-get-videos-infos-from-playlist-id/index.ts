@@ -1,0 +1,3 @@
+import YoutubeGetVideosInfosFromPlaylistId from "./YoutubeGetVideosInfosFromPlaylistId.vue"
+
+export default YoutubeGetVideosInfosFromPlaylistId

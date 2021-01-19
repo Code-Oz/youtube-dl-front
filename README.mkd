@@ -1,0 +1,63 @@
+## Youtube Downloader from video id or playlist id
+
+*This project is tied to https://github.com/CodeOzz/youtube-dl-node, you need to use both part if you want to use the project.*
+
+As named, this project will help you to download video youtube in .mp4, you can download video from id or directly from playlist youtube.
+
+Don't forget to make your playlist public since we are not using Youtube API we need this in order to fetch video in the playlist.
+
+Some videos are not available to be downloaded, so check another video id for this video.
+
+Details: Only work for video not longer than 10 minutes, has audio available and mp4 format available for this video.
+
+### Setup
+
+```
+npm install
+```
+
+```
+npm run dev
+```
+
+Go to `https://localhost:8080/`
+
+### Components infos
+
+*Use mermaid to see graph below*
+
+```mermaid
+graph TB
+    YoutubeDownloader-->MediaSelector
+    MediaSelector-->YoutubeGetInfosVideos
+    MediaSelector-->YoutubeGetInfosPlaylist
+    YoutubeGetInfosPlaylist-->YoutubeDownloader
+    YoutubeGetInfosVideos-->YoutubeDownloader
+
+    YoutubePanel-->YoutubeDownloader
+    YoutubeDashboard-->YoutubeDownloader
+```
+
+**YoutubeDownloader**
+
+Serve to control download of video (take a list of video to download and download it)
+
+**YoutubeGetInfosVideos**
+
+Use this component in order to fetch video infos, like title.
+
+**YoutubeGetInfosPlaylist**
+
+Serve to  get videos infos from a playlist, like title.
+
+**MediaSelector**
+
+When we have fetched infos from videos, we select video that we want to be downloaded.
+
+**YoutubePanel**
+
+Panel control in order to put id of video/playlist and download video
+
+**YoutubeDashboard**
+
+When videos are downloaded, some can failed for some reasons explained above, so you see the download summarized and retry if you want.

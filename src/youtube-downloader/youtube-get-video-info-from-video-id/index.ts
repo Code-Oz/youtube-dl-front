@@ -1,0 +1,3 @@
+import YoutubeGetVideoInfoFromVideoId from "./YoutubeGetVideoInfoFromVideoId.vue"
+
+export default YoutubeGetVideoInfoFromVideoId
