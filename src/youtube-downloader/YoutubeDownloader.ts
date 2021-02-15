@@ -67,7 +67,9 @@ export default mixins(GetErrorMessageMixin).extend({
             await fetchingInfos()
         },
         onErrorDownloadVideo(event: { err: any, title: string | undefined, mediaId: string | undefined }) {
-            const errorMessage = this.getErrorMessage(event.err, 'This video is not available to be download, try with another Id')
+            console.log(event.err.toJSON())
+            console.log(event)
+            const errorMessage = this.getErrorMessage(event.err, 'This video is not available to be download (video format not avalaible in mp4, video too long (> 10 mins) or video is deleted), try with another Id')
 
             this.currentMedias.push({
                 title: event.title || "no_title",
