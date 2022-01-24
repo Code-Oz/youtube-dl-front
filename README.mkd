@@ -1,14 +1,14 @@
 ## Youtube Downloader from video id or playlist id
 
-*This project is tied to https://github.com/CodeOzz/youtube-dl-node, you need to use both part if you want to use the project.*
+_This project is tied to https://github.com/code-oz/youtube-dl-node, you need to use both part if you want to use the project._
 
-As named, this project will help you to download video youtube in .mp4, you can download video from id or directly from playlist youtube.
+As named, this project will help you to download video youtube in .mp4, you can **download video** from **id** or directly from **playlist youtube.**
+
+Files are mp4, but you can transform them into mp3 files (follow the 4 step bellow)
 
 Don't forget to make your playlist public since we are not using Youtube API we need this in order to fetch video in the playlist.
 
 Some videos are not available to be downloaded, so check another video id for this video.
-
-Details: Only work for video not longer than 10 minutes, has audio available and mp4 format available for this video.
 
 ### Setup
 
@@ -22,9 +22,13 @@ npm run dev
 
 Go to `https://localhost:8080/`
 
+### How is it working?
+
+Check out https://github.com/code-oz/youtube-dl-node
+
 ### Components infos
 
-*Use mermaid to see graph below*
+_Use mermaid to see graph below_
 
 ```mermaid
 graph TB
@@ -48,7 +52,7 @@ Use this component in order to fetch video infos, like title.
 
 **YoutubeGetInfosPlaylist**
 
-Serve to  get videos infos from a playlist, like title.
+Serve to get videos infos from a playlist, like title.
 
 **MediaSelector**
 
